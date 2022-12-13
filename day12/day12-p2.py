@@ -1,7 +1,6 @@
 from copy import deepcopy
 from collections import deque
 import time
-import math
 import numpy as np
 
 filename = "in.txt"
@@ -14,8 +13,6 @@ grid = []
 
 def heur(coords):
     (row, col) = coords
-    # return abs(eRow - row) + abs(eCol - col)
-    # return (eRow - row)*(eRow - row) + (eCol - col)*(eCol - col) + (grid[eRow][eCol] - grid[row][col])*(grid[eRow][eCol] - grid[row][col])
     return (grid[eRow][eCol] - grid[row][col])*(grid[eRow][eCol] - grid[row][col])
 
 
@@ -62,7 +59,6 @@ with open(filename, "r") as f:
         rowIndex += 1
 
 nodes = np.array(grid)
-# print(nodes)
 az = []
 for row in range(len(grid)):
     for col in range(len(grid[0])):
