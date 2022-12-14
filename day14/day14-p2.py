@@ -67,6 +67,6 @@ count = 0
 while not over:
     grid = spawnSand(grid)
     count += 1
-    # printGrid(range(20), range(480, 540), grid)
 
+printGrid(range(len(grid)), range(200, 800), grid)
 print(count)
